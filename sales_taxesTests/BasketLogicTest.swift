@@ -8,7 +8,7 @@
 
 import XCTest
 
-class AppLogicTest: BaseTest {
+class BasketLogicTest: BaseTest {
         
     func testTaxEndTotal() {
         //given
@@ -18,10 +18,10 @@ class AppLogicTest: BaseTest {
         let input_4 = "2 imported box of chocolates at 10.00\n2 imported bottle of perfume at 47.50"
     
         //when
-        let tax_total = AppLogic.getTaxAndTotal(input: input)
-        let tax_total_2 = AppLogic.getTaxAndTotal(input: input_2)
-        let tax_total_3 = AppLogic.getTaxAndTotal(input: input_3)
-        let tax_total_4 = AppLogic.getTaxAndTotal(input: input_4)
+        let tax_total = BasketLogic.getTaxAndTotal(input: input)
+        let tax_total_2 = BasketLogic.getTaxAndTotal(input: input_2)
+        let tax_total_3 = BasketLogic.getTaxAndTotal(input: input_3)
+        let tax_total_4 = BasketLogic.getTaxAndTotal(input: input_4)
         
         //then
         XCTAssertEqual(tax_total?.tax, "6.70")
@@ -41,9 +41,9 @@ class AppLogicTest: BaseTest {
         let input_3 = "1 imported box of chocolates at 10.00\n1 imported bottle of perfume at 47.50"
         
         //when
-        let output_1 = AppLogic.getBill(input: input_1)
-        let output_2 = AppLogic.getBill(input: input_2)
-        let output_3 = AppLogic.getBill(input: input_3)
+        let output_1 = BasketLogic.getBill(input: input_1)
+        let output_2 = BasketLogic.getBill(input: input_2)
+        let output_3 = BasketLogic.getBill(input: input_3)
         
         //then
         let result_1 = "1 imported bottle of perfume: 32.19\n1 bottle of perfume: 20.89\n1 packet of headache pills: 9.75\n1 imported box of chocolates: 11.85\nSales Taxes: 6.70\nTotal: 74.68"

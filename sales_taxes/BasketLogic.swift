@@ -9,7 +9,7 @@
 import Foundation
 
 
-class AppLogic {
+class BasketLogic {
     
     class func getTaxAndTotal(input: String) -> (products: [Product], tax: String?, total: String?)? {
         let lines = Parser.splitLine(input: input)
