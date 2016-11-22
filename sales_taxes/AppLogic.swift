@@ -27,7 +27,7 @@ class AppLogic {
         if let datas = datas {
             var result: String = ""
             for product in datas.products {
-                let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+                let formatter = PriceNumberFormatter(patten: .TwoDecimal)
                 let formattedPrice = formatter.formatPrice(price: product.getPriceWithTax())
                 if let formattedPrice = formattedPrice {
                     result = result + "\(product.quantity) " + "\(product.getDescription()): " + formattedPrice + "\n"
@@ -46,7 +46,7 @@ class AppLogic {
     
     class func getTotalTax(products: [Product]) -> (Double, String?) {
         let totalTax = products.map({$0.getTaxAmount()}).reduce(0.0,+)
-        let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+        let formatter = PriceNumberFormatter(patten: .TwoDecimal)
         return (totalTax, formatter.formatPrice(price: totalTax))
     }
     
@@ -54,7 +54,7 @@ class AppLogic {
         let total = products.map({$0.getPrice()}).reduce(0.0, +)
         let tax = getTotalTax(products: products)
         let totalWithTax = total + tax.0
-        let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+        let formatter = PriceNumberFormatter(patten: .TwoDecimal)
         return formatter.formatPrice(price: totalWithTax)
     }
     

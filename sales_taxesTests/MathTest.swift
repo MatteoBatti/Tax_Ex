@@ -52,7 +52,7 @@ class MathTest: BaseTest {
         let output_3_4 = Math.calculateTax(price: price_3_4, tax: tax_3_4)
         let total_tax_3 = output_3_1 + output_3_2 + output_3_3 + output_3_4
         
-        let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+        let formatter = PriceNumberFormatter(patten: .TwoDecimal)
         
         //then
         XCTAssertEqual(formatter.formatPrice(price: total_tax_1), "7.65")
@@ -75,7 +75,7 @@ class MathTest: BaseTest {
         let output_3 = Math.calculatePrice(price: price_3, tax: tax_3)
         let total_amount = output_1 + output_2 + output_3
         
-        let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+        let formatter = PriceNumberFormatter(patten: .TwoDecimal)
         
         //then
         XCTAssertEqual(formatter.formatPrice(price: output_1), "12.49")

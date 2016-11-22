@@ -20,7 +20,7 @@ class FormatterTests: BaseTest {
         let case_6 = 1111.111
         
         //when
-        let formatter = TaxNumberFormatter(patten: .TwoDecimal)
+        let formatter = PriceNumberFormatter(patten: .TwoDecimal)
         
         let output_case_1 = formatter.formatPercentage(perc: Double(case_1))
         let output_case_2 = formatter.formatPercentage(perc: Double(case_2))

@@ -8,14 +8,14 @@
 
 import Foundation
 
-enum TaxNumberPattern: String {
+enum PriceNumberPattern: String {
     
     case TwoDecimal = "#,##0.00"    
 }
 
-class TaxNumberFormatter: NumberFormatter {
+class PriceNumberFormatter: NumberFormatter {
     
-    convenience init(patten: TaxNumberPattern) {
+    convenience init(patten: PriceNumberPattern) {
         self.init()
         self.locale = Locale(identifier: "us")
         self.positiveFormat = patten.rawValue
