@@ -22,11 +22,13 @@
 		AF4B5A891DDF971B0013AC2A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B5A881DDF971B0013AC2A /* Product.swift */; };
 		AF4B5A8D1DDF9A490013AC2A /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B5A8C1DDF9A490013AC2A /* Math.swift */; };
 		AF4B5A8F1DDF9ADD0013AC2A /* TaxNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B5A8E1DDF9ADD0013AC2A /* TaxNumberFormatter.swift */; };
+		AF85B31D1DE4E4E300847157 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85B31B1DE4E44600847157 /* StringExtension.swift */; };
 		AFB812DB1DE2066A00CBF3C9 /* FormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB812DA1DE2066A00CBF3C9 /* FormatterTests.swift */; };
 		AFB812DC1DE206F300CBF3C9 /* TaxNumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B5A8E1DDF9ADD0013AC2A /* TaxNumberFormatter.swift */; };
 		AFB812DE1DE2098900CBF3C9 /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB812DD1DE2098900CBF3C9 /* BaseTest.swift */; };
 		AFB812E01DE209E300CBF3C9 /* MathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB812DF1DE209E300CBF3C9 /* MathTest.swift */; };
 		AFB812E11DE20A8200CBF3C9 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4B5A8C1DDF9A490013AC2A /* Math.swift */; };
+		AFF444161DE4E6B800E63835 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF85B31B1DE4E44600847157 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 		AF4B5A881DDF971B0013AC2A /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AF4B5A8C1DDF9A490013AC2A /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		AF4B5A8E1DDF9ADD0013AC2A /* TaxNumberFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxNumberFormatter.swift; sourceTree = "<group>"; };
+		AF85B31B1DE4E44600847157 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AFB812DA1DE2066A00CBF3C9 /* FormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormatterTests.swift; sourceTree = "<group>"; };
 		AFB812DD1DE2098900CBF3C9 /* BaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		AFB812DF1DE209E300CBF3C9 /* MathTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathTest.swift; sourceTree = "<group>"; };
@@ -101,16 +104,17 @@
 			isa = PBXGroup;
 			children = (
 				AF4B5A601DDED93B0013AC2A /* AppDelegate.swift */,
+				AF4B5A801DDF836D0013AC2A /* AppLogic.swift */,
 				AF4B5A671DDED93B0013AC2A /* Assets.xcassets */,
-				AF4B5A881DDF971B0013AC2A /* Product.swift */,
-				AF4B5A8C1DDF9A490013AC2A /* Math.swift */,
-				AF4B5A8E1DDF9ADD0013AC2A /* TaxNumberFormatter.swift */,
 				AF4B5A6C1DDED93B0013AC2A /* Info.plist */,
 				AF4B5A691DDED93B0013AC2A /* LaunchScreen.storyboard */,
 				AF4B5A641DDED93B0013AC2A /* Main.storyboard */,
 				AF4B5A621DDED93B0013AC2A /* MainViewController.swift */,
+				AF4B5A8C1DDF9A490013AC2A /* Math.swift */,
 				AF4B5A851DDF88540013AC2A /* Parser.swift */,
-				AF4B5A801DDF836D0013AC2A /* AppLogic.swift */,
+				AF4B5A881DDF971B0013AC2A /* Product.swift */,
+				AF85B31B1DE4E44600847157 /* StringExtension.swift */,
+				AF4B5A8E1DDF9ADD0013AC2A /* TaxNumberFormatter.swift */,
 			);
 			path = sales_taxes;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 				AF4B5A891DDF971B0013AC2A /* Product.swift in Sources */,
 				AF4B5A631DDED93B0013AC2A /* MainViewController.swift in Sources */,
 				AF4B5A611DDED93B0013AC2A /* AppDelegate.swift in Sources */,
+				AF85B31D1DE4E4E300847157 /* StringExtension.swift in Sources */,
 				AF4B5A811DDF836D0013AC2A /* AppLogic.swift in Sources */,
 				AF4B5A8F1DDF9ADD0013AC2A /* TaxNumberFormatter.swift in Sources */,
 				AF4B5A8D1DDF9A490013AC2A /* Math.swift in Sources */,
@@ -253,6 +258,7 @@
 				AF1076271DE42968003EA405 /* AppLogicTest.swift in Sources */,
 				AF4B5A871DDF89D80013AC2A /* Parser.swift in Sources */,
 				AFB812DE1DE2098900CBF3C9 /* BaseTest.swift in Sources */,
+				AFF444161DE4E6B800E63835 /* StringExtension.swift in Sources */,
 				AFB812E11DE20A8200CBF3C9 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

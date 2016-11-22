@@ -64,6 +64,32 @@ class Product: ProductInterface {
         return price * Double(quantity)
     }
     
+    
+    func getTaxAmount() -> Double {
+        return Math.calculateTax(price: self.getPrice(), tax: self.tax())
+    }
+    
+    func getPriceWithTax() -> Double {
+        return self.getPrice() + Math.calculateTax(price: self.getPrice(), tax: self.tax())
+    }
+    
+    func getDescription() -> String {
+        
+        var tmpDescription: String = self.description.copy() as! String
+        if let str_qty_range = self.description.range(of: "\(quantity)") {
+            tmpDescription.replaceSubrange(str_qty_range, with: "")
+        }
+        if let str_qty_range = self.description.range(of: " imported") {
+            tmpDescription.replaceSubrange(str_qty_range, with: "")
+        }
+        
+        if imported == true {
+            return "imported" + tmpDescription
+        } else {
+            return tmpDescription
+        }
+    }
+    
     func tax() -> Double {
         return imported == true ? (mainTax + importedTax) : mainTax
     }

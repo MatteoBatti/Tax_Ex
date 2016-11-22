@@ -10,15 +10,14 @@ import Foundation
 
 enum TaxNumberPattern: String {
     
-    case TwoDecimal = "#,##0.00"
-    case TwoDecimalWithPercentage = "#,##0.##%"
-    
+    case TwoDecimal = "#,##0.00"    
 }
 
 class TaxNumberFormatter: NumberFormatter {
     
     convenience init(patten: TaxNumberPattern) {
         self.init()
+        self.locale = Locale(identifier: "us")
         self.positiveFormat = patten.rawValue
     }
 

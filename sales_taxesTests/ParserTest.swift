@@ -11,12 +11,12 @@ import XCTest
 class ParserTest: BaseTest {
     
     
-    func testSplitInput() {
+    func testSplitLine() {
         //given
         let input = "1 imported bottle of perfume at 27.99\n1 bottle of perfume at 18.99\n1 packet of headache pills at 9.75\n\n\n1 box of imported chocolates at 11.25"
         
         //when
-        let output = Parser.split(input: input)
+        let output = Parser.splitLine(input: input)
         
         //then
         XCTAssertEqual(output, ["1 imported bottle of perfume at 27.99", "1 bottle of perfume at 18.99", "1 packet of headache pills at 9.75", "1 box of imported chocolates at 11.25"])
@@ -47,7 +47,7 @@ class ParserTest: BaseTest {
         XCTAssertFalse(output_5)
     }
     
-    func testGetQuantity() {
+    func testGetProductQuantity() {
         
         //given
         let input_1 = "1 book at 12.49"
@@ -75,7 +75,7 @@ class ParserTest: BaseTest {
         XCTAssertEqual(output_6, 400)
     }
     
-    func testGetPrice() {
+    func testGetProductPrice() {
         
         //given
         let input_1 = "1 book at 12.49"
@@ -103,7 +103,7 @@ class ParserTest: BaseTest {
         XCTAssertEqual(output_6, 220.34)
     }
     
-    func testIfProductIsImported() {
+    func testIfIsImportedProduct() {
         //given
         let input_1 = "1 imported bottle of perfume at 27.99"
         let input_2 = "3 bottle of perfume at 18.99"
@@ -123,7 +123,7 @@ class ParserTest: BaseTest {
         XCTAssertTrue(output_4)
     }
     
-    func testProductType() {
+    func testGetProductType() {
         //given
         let input_1 = "1 imported bottle of perfume at 27.99"
         let input_2 = "3 bottle of perfume at 18.99"

@@ -11,7 +11,7 @@ import Foundation
 class Parser: AnyObject {
     
     
-    class func split(input: String) -> [String] {
+    class func splitLine(input: String) -> [String] {
         let newlineChars = NSCharacterSet.newlines
         return input.components(separatedBy: newlineChars).filter({!$0.isEmpty}).filter({$0 != ""})
     }
@@ -57,8 +57,8 @@ class Parser: AnyObject {
     }
     
     class func getDescription(input: String) -> String? {
-        if let match = input.range(of: "at") {
-            return input.substring(from: match.lowerBound)
+        if let match = input.range(of: " at") {
+            return input.substring(to: match.lowerBound)
         }
         return nil
     }
@@ -89,8 +89,9 @@ class Parser: AnyObject {
         let price = Parser.getPrice(input: inputLine)
         let type = Parser.getProductType(input: inputLine)
         let imported = Parser.isImportedProduct(input: inputLine)
-        if let quantity = quantity, let price = price, let type = type {
-            return Product(type: type, price: price, quantity: quantity, imported: imported, description: inputLine)
+        let description = Parser.getDescription(input: inputLine)
+        if let quantity = quantity, let price = price, let type = type, let description = description {
+            return Product(type: type, price: price, quantity: quantity, imported: imported, description: description)
         }
         return nil
     }
